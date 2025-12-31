@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url(tigre.jpg) no-repeat  center / cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.header{
+    display: block;
+    padding: 20px;
+    color:#662C39;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.container{
+
+    width: 500px;
+    height: auto;
+     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;      
+}
+
+.bunny{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container .bunny img{
+    width: 175px;
+    height: 175px;
+    padding: 10px;
+    margin-top: 10px;
+    transition: all 0.3s ease; /* Animation fluide */
+}
+
+.container .texte{
+    padding: 20px;
+}
+
+/* Nouvelle classe pour l'image après le clic */
+.container .bunny img.changed-image {
+    width: 350px;
+    height: 500px; /* Nouvelle taille */
+    object-fit: cover; /* Conserve les proportions */
+    border-radius: 20px;
+}
+
+.container .bunny button{
+    background-color: #FFC5D3;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0, 0);
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.btn:hover::after {
+    transform: scale(1, 1);
+}
